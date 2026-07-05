@@ -9,69 +9,106 @@
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         body {
             font-family: 'Quicksand', sans-serif;
-            background: #0a0000;
-            color: #ffecec;
-            background-image: radial-gradient(#ff0000 1px, transparent 1px);
-            background-size: 25px 25px;
+            background: #050505;
+            color: #fff0f0;
+            background-image: radial-gradient(#dc2626 1px, transparent 1px);
+            background-size: 35px 35px;
         }
-        .tachado { text-align: center; color: #ff0000; font-size: 1.5em; letter-spacing: 3px; }
-        header { text-align: center; padding: 80px 20px; background: linear-gradient(180deg, #ff0000 0%, #0a0000 100%); border-bottom: 3px solid #ff0000; }
-        header h1 { font-size: 3em; color: #ff0000; font-weight: 800; text-shadow: 0 0 15px #ff0000; }
-        header p { font-size: 1.2em; color: #ffb3b3; margin-top: 10px; }
+        .tachado { text-align: center; color: #dc2626; font-size: 1.5em; letter-spacing: 5px; padding: 10px 0; }
+        header { 
+            text-align: center; 
+            padding: 80px 20px; 
+            background: linear-gradient(180deg, #7f1d1d 0%, #050505 100%); 
+            border-bottom: 3px solid #dc2626; 
+        }
+        header h1 { 
+            font-size: 3em; 
+            color: #fca5a5; 
+            font-weight: 800; 
+            text-shadow: 0 0 20px #dc2626; 
+        }
+        header p { font-size: 1.2em; color: #fecaca; margin-top: 10px; }
+        .kawaii { font-size: 2.5em; margin: 10px 0; }
         
         section { padding: 50px 8%; max-width: 900px; margin: auto; }
-        h2 { text-align: center; color: #ff0000; font-size: 2.3em; margin-bottom: 30px; text-shadow: 0 0 10px #ff0000; }
+        h2 { 
+            text-align: center; 
+            color: #fca5a5; 
+            font-size: 2.3em; 
+            margin-bottom: 30px; 
+            text-shadow: 0 0 10px #dc2626; 
+        }
         
         .categoria { 
-            background: #1a0000; 
+            background: #121212; 
             padding: 25px; 
-            border-radius: 15px; 
+            border-radius: 18px; 
             margin-bottom: 25px; 
-            box-shadow: 0 0 20px rgba(255,0,0,0.3); 
-            border: 2px solid #ff0000; 
+            box-shadow: 0 0 25px rgba(220,38,38,0.2); 
+            border: 1px solid #7f1d1d; 
+            transition: 0.3s;
         }
-        .categoria h3 { color: #ff0000; font-size: 1.6em; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-        .item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dashed #550000; }
+        .categoria:hover { border: 1px solid #dc2626; box-shadow: 0 0 30px rgba(220,38,38,0.4); }
+        .categoria h3 { color: #fca5a5; font-size: 1.6em; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dashed #450a0a; }
         .item:last-child { border: none; }
-        .item-nombre { font-weight: 600; color: #ffecec; }
-        .item-precio { color: #ff0000; font-weight: 800; font-size: 1.1em; }
+        .item-nombre { font-weight: 600; color: #fff0f0; }
+        .item-precio { color: #f87171; font-weight: 800; font-size: 1.1em; }
         
         .btn-comprar { 
-            background: linear-gradient(90deg, #ff0000, #8b0000); 
-            color: white; padding: 12px 20px; border-radius: 10px; 
+            background: linear-gradient(90deg, #dc2626, #7f1d1d); 
+            color: white; padding: 14px 20px; border-radius: 12px; 
             border: none; cursor: pointer; font-weight: 700; 
             margin-top: 15px; width: 100%; font-size: 1em;
-            box-shadow: 0 0 15px rgba(255,0,0,0.5);
+            box-shadow: 0 0 15px rgba(220,38,38,0.4);
+            transition: 0.3s;
         }
-        .btn-comprar:hover { transform: scale(1.03); box-shadow: 0 0 25px #ff0000; }
+        .btn-comprar:hover { transform: translateY(-2px); box-shadow: 0 0 25px #dc2626; }
+        
+        .reglas { 
+            background: #121212; 
+            padding: 30px; 
+            border-radius: 18px; 
+            border-left: 5px solid #dc2626; 
+            box-shadow: 0 0 25px rgba(220,38,38,0.2);
+        }
+        .regla-item { 
+            padding: 12px 0; 
+            border-bottom: 1px dashed #450a0a; 
+            display: flex; 
+            gap: 10px;
+        }
+        .regla-item:last-child { border: none; }
+        .regla-item b { color: #fca5a5; }
         
         .pagos { 
-            background: #1a0000; 
+            background: #121212; 
             padding: 30px; 
-            border-radius: 15px; 
-            border: 3px solid #ff0000; 
+            border-radius: 18px; 
+            border: 2px solid #7f1d1d; 
             text-align: center;
-            box-shadow: 0 0 20px rgba(255,0,0,0.3);
+            box-shadow: 0 0 25px rgba(220,38,38,0.2);
         }
-        .dato-pago { background:#0a0000; padding:20px; border-radius:10px; margin:15px 0; border:1px solid #ff0000; }
+        .dato-pago { background:#050505; padding:20px; border-radius:12px; margin:15px 0; border:1px solid #7f1d1d; text-align: left; }
+        .dato-pago h3 { color: #fca5a5; margin-bottom: 10px; }
         
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); }
-        .modal-content { background: #1a0000; margin: 10% auto; padding: 30px; border: 3px solid #ff0000; border-radius: 15px; width: 90%; max-width: 500px; box-shadow: 0 0 30px #ff0000; }
-        .close { color: #ff0000; float: right; font-size: 28px; cursor: pointer; }
-        .btn-whatsapp { background: linear-gradient(90deg, #25D366, #128C7E); color: white; padding: 14px 30px; border-radius: 10px; text-decoration: none; font-weight: 700; display: block; text-align: center; margin-top: 20px; }
+        .modal-content { background: #121212; margin: 10% auto; padding: 30px; border: 2px solid #dc2626; border-radius: 18px; width: 90%; max-width: 500px; box-shadow: 0 0 40px rgba(220,38,38,0.5); }
+        .close { color: #dc2626; float: right; font-size: 28px; cursor: pointer; font-weight: bold; }
+        .btn-whatsapp { background: linear-gradient(90deg, #25D366, #128C7E); color: white; padding: 14px 30px; border-radius: 12px; text-decoration: none; font-weight: 700; display: block; text-align: center; margin-top: 20px; }
         
-        footer { text-align: center; padding: 40px; color: #ff0000; border-top: 2px solid #550000; }
+        footer { text-align: center; padding: 40px; color: #dc2626; border-top: 1px solid #450a0a; }
     </style>
 </head>
 <body>
 
 <div class="tachado">̶ ̶ ̶ ̶ ̶ ̶</div>
 <header>
-    <div style="font-size: 2em;">૮ ․ ྀིა</div>
+    <div class="kawaii">૮ ․ ྀིა</div>
     <h1>Hola, Soy Alee Dzn</h1>
     <p>Te vengo a ofrecer mis trabajos</p>
-    <div style="font-size: 2em;">𝜗ৎ</div>
-</div>
+    <div class="kawaii">𝜗ৎ</div>
+</header>
 <div class="tachado">̶ ̶ ̶ ̶ ̶ ̶</div>
 
 <section id="servicios">
@@ -113,39 +150,59 @@
     </div>
 </section>
 
+<section id="reglas">
+    <h2>Reglas Importantes 📌</h2>
+    <div class="reglas">
+        <div class="regla-item">🔴 <b>Pago:</b> Se requiere el pago completo para comenzar.</div>
+        <div class="regla-item">⏰ <b>Entrega:</b> 6 a 12 días según la dificultad del trabajo.</div>
+        <div class="regla-item">🚫 <b>Cambios:</b> No se hacen cambios tras la entrega.</div>
+        <div class="regla-item">💸 <b>Reembolsos:</b> No hay reembolsos de dinero ni diamantes.</div>
+        <div class="regla-item">💎 <b>Precios:</b> Los precios son fijos, sin descuentos.</div>
+        <div class="regla-item">©️ <b>Marca de agua:</b> No se permite modificar mis diseños ni borrar la marca de agua.</div>
+        <div class="regla-item">⛔ <b>Prohibido:</b> Cualquier modificación de mis trabajos está prohibida.</div>
+        <div class="regla-item">🔄 <b>Si quieres cambios:</b> Por favor busquen otra dzn y no utilicen mis trabajos.</div>
+        <div class="regla-item">✨ <b>Material:</b> Solo trabajo con material original. No acepto logos robados, copias, ni imágenes de baja calidad.</div>
+        <div class="regla-item">📅 <b>Tiempo:</b> Si no respondes en 5 días, no se entregará lo pendiente.</div>
+        <div class="regla-item">📋 <b>Turnos:</b> Cada cliente tiene su turno. No acepto trabajos urgentes.</div>
+        <div class="regla-item">💾 <b>Respaldo:</b> Una vez entregado el diseño, el cliente es responsable de guardarlo. No se reenvía si lo pierde.</div>
+        <div class="regla-item">🖼️ <b>Formato:</b> Se entregan en PNG (sin fondo) o JPG (con fondo).</div>
+        <div class="regla-item">📲 <b>Envío:</b> Se envían por WhatsApp, Instagram o Facebook.</div>
+    </div>
+</section>
+
 <section id="pagos">
     <h2>𖹭.ᐟ MÉTODO DE PAGO 💎</h2>
     <div class="pagos">
         <div class="dato-pago">
-            <h3 style="color:#ff0000; margin-bottom:10px;">SOLO DIAMANTES</h3>
+            <h3>SOLO DIAMANTES</h3>
             <p><b>Usuario:</b> Millakla ˣ⁷</p>
             <p><b>Región:</b> Sur</p>
             <p><b>ID:</b> 2225282302</p>
         </div>
-        <p style="margin-top:15px; color:#ffb3b3;"><small>Paga y envía captura por WhatsApp para iniciar 🎀</small></p>
+        <p style="margin-top:15px; color:#fecaca;"><small>Paga y envía captura por WhatsApp para iniciar 🎀</small></p>
     </div>
 </section>
 
 <footer>
-    Hecho con sangre por Alee Dzn ♡ ̶ ̶ ̶ ̶
+    Hecho con amor por Alee Dzn ♡ ̶ ̶ ̶ ̶
 </footer>
 
 <!-- MODAL -->
 <div id="modalPago" class="modal">
   <div class="modal-content">
     <span class="close" onclick="cerrarModal()">&times;</span>
-    <h2 id="tituloServicio" style="color:#ff0000;">Comprar</h2>
+    <h2 id="tituloServicio" style="color:#fca5a5;">Comprar</h2>
     <p style="text-align:center; margin:15px 0;">Método de pago único ✨</p>
     
     <div class="dato-pago">
-        <h3 style="color:#ff0000;">💎 DIAMANTES</h3>
+        <h3>💎 DIAMANTES</h3>
         <p><b>Usuario:</b> Millakla ˣ⁷</p>
         <p><b>Región:</b> Sur</p>
         <p><b>ID:</b> 2225282302</p>
     </div>
 
     <a id="btnComprobante" href="https://wa.me/56932884244" class="btn-whatsapp">Enviar comprobante por WhatsApp</a>
-  </div>
+</div>
 </div>
 
 <script>
@@ -153,7 +210,7 @@ function abrirModal(servicio) {
     document.getElementById('modalPago').style.display = 'block';
     document.getElementById('tituloServicio').innerText = 'Comprar: ' + servicio;
     document.getElementById('btnComprobante').href = 
-        `https://wa.me/56932884244?text=Hola%20Alee%20Dzn%20🔥%20Ya%20envié%20diamantes%20por:%20${servicio}%20[Adjunto%20captura]`;
+        `https://wa.me/56932884244?text=Hola%20Alee%20Dzn%20🔥%20Ya%20envié%20diamantes%20por:%20${servicio}%20[Adjunto%20captura]%20Acepto%20las%20reglas`;
 }
 function cerrarModal() {
     document.getElementById('modalPago').style.display = 'none';
@@ -164,4 +221,4 @@ window.onclick = function(event) {
 </script>
 
 </body>
-  </html>
+    </html>
