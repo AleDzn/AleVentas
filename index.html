@@ -14,6 +14,19 @@
             background-image: radial-gradient(#dc2626 1px, transparent 1px);
             background-size: 35px 35px;
         }
+        nav {
+            position: sticky; top: 0; z-index: 999;
+            background: rgba(5,5,5,0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #7f1d1d;
+            padding: 15px 8%;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        nav .logo { color: #fca5a5; font-weight: 800; font-size: 1.3em; text-shadow: 0 0 10px #dc2626; }
+        nav .links { display: flex; gap: 25px; }
+        nav .links a { color: #fecaca; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        nav .links a:hover { color: #dc2626; text-shadow: 0 0 10px #dc2626; }
+        
         .tachado { text-align: center; color: #dc2626; font-size: 1.5em; letter-spacing: 5px; padding: 10px 0; }
         header { 
             text-align: center; 
@@ -30,7 +43,7 @@
         header p { font-size: 1.2em; color: #fecaca; margin-top: 10px; }
         .kawaii { font-size: 2.5em; margin: 10px 0; }
         
-        section { padding: 50px 8%; max-width: 900px; margin: auto; }
+        section { padding: 60px 8%; max-width: 900px; margin: auto; }
         h2 { 
             text-align: center; 
             color: #fca5a5; 
@@ -91,6 +104,7 @@
         }
         .dato-pago { background:#050505; padding:20px; border-radius:12px; margin:15px 0; border:1px solid #7f1d1d; text-align: left; }
         .dato-pago h3 { color: #fca5a5; margin-bottom: 10px; }
+        .btn-ig { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; padding: 12px 25px; border-radius: 12px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 15px; }
         
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); }
         .modal-content { background: #121212; margin: 10% auto; padding: 30px; border: 2px solid #dc2626; border-radius: 18px; width: 90%; max-width: 500px; box-shadow: 0 0 40px rgba(220,38,38,0.5); }
@@ -98,11 +112,25 @@
         .btn-whatsapp { background: linear-gradient(90deg, #25D366, #128C7E); color: white; padding: 14px 30px; border-radius: 12px; text-decoration: none; font-weight: 700; display: block; text-align: center; margin-top: 20px; }
         
         footer { text-align: center; padding: 40px; color: #dc2626; border-top: 1px solid #450a0a; }
+        
+        @media (max-width: 768px) {
+            nav .links { gap: 12px; font-size: 0.9em; }
+        }
     </style>
 </head>
 <body>
 
-<div class="tachado">̶ ̶ ̶ ̶ ̶ ̶</div>
+<nav>
+    <div class="logo">Alee Dzn ♡</div>
+    <div class="links">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#reglas">Reglas</a>
+        <a href="#pagos">Pagos</a>
+    </div>
+</nav>
+
+<div id="inicio" class="tachado">̶ ̶ ̶ ̶ ̶ ̶</div>
 <header>
     <div class="kawaii">૮ ․ ྀིა</div>
     <h1>Hola, Soy Alee Dzn</h1>
@@ -175,10 +203,11 @@
     <div class="pagos">
         <div class="dato-pago">
             <h3>SOLO DIAMANTES</h3>
-            <p><b>Usuario:</b> Millakla ˣ⁷</p>
-            <p><b>Región:</b> Sur</p>
+            <p><b>Nick:</b> Alessitapㅤ୨ৎ</p>
             <p><b>ID:</b> 2225282302</p>
+            <p><b>Región:</b> EeUu</p>
         </div>
+        <a href="https://instagram.com/allee._dzn" class="btn-ig" target="_blank">Sígueme en Instagram 📸</a>
         <p style="margin-top:15px; color:#fecaca;"><small>Paga y envía captura por WhatsApp para iniciar 🎀</small></p>
     </div>
 </section>
@@ -187,7 +216,6 @@
     Hecho con amor por Alee Dzn ♡ ̶ ̶ ̶ ̶
 </footer>
 
-<!-- MODAL -->
 <div id="modalPago" class="modal">
   <div class="modal-content">
     <span class="close" onclick="cerrarModal()">&times;</span>
@@ -196,9 +224,9 @@
     
     <div class="dato-pago">
         <h3>💎 DIAMANTES</h3>
-        <p><b>Usuario:</b> Millakla ˣ⁷</p>
-        <p><b>Región:</b> Sur</p>
+        <p><b>Nick:</b> Alessitapㅤ୨ৎ</p>
         <p><b>ID:</b> 2225282302</p>
+        <p><b>Región:</b> EeUu</p>
     </div>
 
     <a id="btnComprobante" href="https://wa.me/56932884244" class="btn-whatsapp">Enviar comprobante por WhatsApp</a>
@@ -221,4 +249,4 @@ window.onclick = function(event) {
 </script>
 
 </body>
-    </html>
+            </html>
